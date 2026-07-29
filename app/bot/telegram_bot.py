@@ -2,6 +2,7 @@
 
 from telegram.ext import Application, ApplicationBuilder, CommandHandler
 
+from app.commands.photo import photo
 from app.commands.ping import ping
 from app.commands.status import status
 
@@ -26,3 +27,5 @@ def register_handlers(application: Application) -> None:
     """
     application.add_handler(CommandHandler("ping", ping))
     application.add_handler(CommandHandler("status", status))
+    application.add_handler(CommandHandler("photo", photo))
+
